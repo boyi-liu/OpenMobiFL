@@ -2,3 +2,6 @@
 **/.DS_Store
 .idea
 
+*.plt
+*.txt
+*.npz

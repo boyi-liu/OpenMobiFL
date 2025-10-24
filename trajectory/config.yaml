@@ -1,0 +1,10 @@
+# Number of clients to select
+client: 100
+
+# Selection method for choosing trajectory data
+# Options: "random" - randomly select clients
+#          "most_traj" - select clients with the most trajectory data
+selection_method: "most_traj"
+
+# Minimum number of trajectory points required for a client to be selected
+traj_number_min: 100
