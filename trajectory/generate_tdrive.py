@@ -2,6 +2,7 @@ import numpy as np
 import pandas as pd
 import os
 import yaml
+
 from datetime import datetime
 from tqdm import tqdm
 
@@ -67,6 +68,11 @@ def generate_trajectory(cfg):
         first_timestamp = df['timestamp'].min()
         timestamps = [(t - first_timestamp).total_seconds() / 60.0 for t in df['timestamp']]  
         timestamps = np.array(timestamps)
+        
+        # Add random offset (0-10 minutes) to avoid all trajectories starting from 0
+        import random
+        random_offset = random.uniform(0, 10)
+        timestamps = timestamps + random_offset
 
         np.savez(
             f'{OUTPUT_DIR}/{i}.npz',
