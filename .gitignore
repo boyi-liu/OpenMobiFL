@@ -5,3 +5,4 @@
 *.plt
 *.txt
 *.npz
+*.pyc
