@@ -1,0 +1,26 @@
+# basic config
+alg: mobhierfavg
+suffix: default
+device: 1
+dataset: mnist
+model: mlp
+
+# federated config
+total_num: 100
+sr: 0.1
+esr: 1
+rnd: 20
+edge_rnd: 1
+test_gap: 1
+delta_time: 5
+
+# mobile config
+traj: tdrive
+comm_range: 0.2
+grid_range: 0.2
+
+# local training config
+bs: 64
+epoch: 5
+lr: 0.01
+gamma: 0.99
